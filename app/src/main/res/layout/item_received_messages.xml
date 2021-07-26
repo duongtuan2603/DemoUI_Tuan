@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_receivedMessagesAvatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/message_curve"
+            android:layout_width="27dp"
+            android:layout_height="17dp"
+            android:background="@drawable/item_receivedmessage_curve"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_receivedMessagesAvatar"
+            app:layout_constraintEnd_toStartOf="@id/received_messages_layout" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:padding="15dp"
+            android:id="@+id/received_messages_layout"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/message_curve"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="59dp"
+            android:background="@drawable/bg_received_messages">
+
+            <TextView
+                android:id="@+id/received_messages_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="A Nhat"
+                android:textSize="15sp"
+                android:textColor="#096B91" />
+
+            <TextView
+                android:id="@+id/received_messages_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/received_messages_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:singleLine="false"
+                android:text="Nếu chọn 1 trong 2 thì em chọn cái màu xanh, vì nó clear ra so với các phần còn lại"
+                android:textSize="17sp"
+                android:textColor="#16161F" />
+
+            <TextView
+                android:id="@+id/received_messages_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thứ 3 -  20:17"
+                app:layout_constraintTop_toBottomOf="@id/received_messages_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
